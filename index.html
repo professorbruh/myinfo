@@ -9,10 +9,9 @@
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/releases/v6.5.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@100;300;400;700&display=swap" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -20,15 +19,15 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><h6>Sidharth Rajagopal</h6></a>
+                <a class="navbar-brand" href="#page-top">Sidharth Rajagopal</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRes   ponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Interests</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
@@ -43,56 +42,338 @@
                        data-rotate='[ "Hello", "Sidharth" ]'></span>
                 </p>-->
         <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">Welcome to My Profile</div>
-                <div class="masthead-heading text-uppercase">Nice to see you around here</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">More about me</a>
+            <canvas id="heroCanvas"></canvas>
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="masthead-subheading">Engineer by day. Debugger by night.</div>
+                <div class="masthead-heading text-uppercase">I build things that scale</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#journey">More about me</a>
             </div>
         </header>
-        <!-- Services-->
-        <section class="page-section" id="services">
+        <!-- Journey Timeline -->
+        <section class="page-section" id="journey" style="background-color: #1a1d21;">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase"></h2>
-                    <h3 class="section-subheading text-muted"><p>A 
-                        <span
-                           class="txt-rotate"
-                           data-period="500"
-                           data-rotate='[ "Tech Geek","Machine Learning Enthusiast", "Web Developer", "Gamer" ]'></span>
-                    </p></h3>
+                    <h2 class="section-heading text-uppercase" style="color: #fff;">My Journey</h2>
+                    <h3 class="section-subheading" style="color: #6c757d;">Education &amp; Career &mdash; the story so far</h3>
                 </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <img src = "assets/img/logo-machine-learning-ml.svg" height = "130" width="130">
-                        </span>
-                        <h4 class="my-3">Machine Learning</h4>
-                        <p class="text-muted">Wanna teach your computer the difference between coffee and your phone charger?
-                            Your tooth paste and your water bottle?
-                            World Domination and World Peace?
-                            Machine Learning's your answer.
-                        </p>
+                <ul class="timeline">
+                    <!-- 2018 - Start of College -->
+                    <li class="timeline-item-anim">
+                        <div class="timeline-image timeline-logo" style="background: #fff;">
+                            <img src="assets/img/amrita-logo.png" alt="Amrita Vishwa Vidyapeetham">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 style="color: #ffc800;">2018</h4>
+                                <h4 class="subheading" style="color: #fff;">Amrita Vishwa Vidyapeetham</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Began my undergraduate journey in Computer Science &amp; Engineering. The start of countless late-night coding sessions, caffeine-fueled discoveries, and a lifelong love affair with debugging.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 2020 - Mid College -->
+                    <li class="timeline-inverted timeline-item-anim">
+                        <div class="timeline-image">
+                            <div class="timeline-icon-wrap">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 style="color: #ffc800;">2020</h4>
+                                <h4 class="subheading" style="color: #fff;">Building &amp; Breaking Things</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Dove deep into Machine Learning, Web Development, and Bot Development. Built Discord bots, scraped the internet, trained models &mdash; and learned that <code style="color: #ffc800;">git push --force</code> has consequences.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 2022 - Graduation & Zscaler -->
+                    <li class="timeline-item-anim">
+                        <div class="timeline-image timeline-logo" style="background: #fff;">
+                            <img src="assets/img/zscaler.png" alt="Zscaler">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 style="color: #ffc800;">2022 &ndash; Present</h4>
+                                <h4 class="subheading" style="color: #fff;">Zscaler &mdash; Securing the Cloud</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Graduated from Amrita and joined Zscaler &mdash; one of the global leaders in cloud security. Working on Out-of-Band CASB, SSPM &amp; Posture Management across enterprise SaaS platforms.</p>
+                                <ul class="timeline-sub">
+                                    <li>
+                                        <p class="sub-period">2022 &ndash; 2023</p>
+                                        <p class="sub-role">Associate Software Engineer</p>
+                                        <p class="sub-desc">Fresh out of college, armed with a degree and dangerous amounts of enthusiasm. Learned that production code is nothing like college assignments.</p>
+                                    </li>
+                                    <li>
+                                        <p class="sub-period">2023 &ndash; 2024</p>
+                                        <p class="sub-role">Software Engineer</p>
+                                        <p class="sub-desc">Started owning features end-to-end. Built API integrations, tamed Kafka consumers, and discovered that "it works on my machine" is not a valid deployment strategy.</p>
+                                    </li>
+                                    <li>
+                                        <p class="sub-period">2024 &ndash; Present</p>
+                                        <p class="sub-role">Senior Software Engineer</p>
+                                        <p class="sub-desc">Leading architecture decisions, mentoring engineers, and scaling systems to handle millions of events. The bugs fear me now. Mostly.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 2025 - Google AI Hack & Patent -->
+                    <li class="timeline-inverted timeline-item-anim">
+                        <div class="timeline-image timeline-logo" style="background: #fff;">
+                            <img src="assets/img/google-logo.webp" alt="Google AI Hack">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 style="color: #ffc800;">2025</h4>
+                                <h4 class="subheading" style="color: #fff;">Google AI Hack &rsquo;25 Champions &amp; Patent</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Won <strong style="color: #fff;">Google AI Hack&rsquo;25 Champions</strong> for building a Data-Backed DLP Policy Recommendation Engine. The project was taken internally as a patent and submitted to the USPTO. From hackathon prototype to intellectual property &mdash; not a bad year.</p>
+                                <p style="margin-top: 0.8rem;"><a href="https://www.credly.com/badges/04fe71cf-4e35-45b1-9b67-20b5ff5d0c41/linked_in_profile" target="_blank" style="color: #ffc800; text-decoration: none; font-weight: 600; font-size: 0.85rem;"><i class="fas fa-external-link-alt" style="margin-right: 6px;"></i>View Credential on Credly</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End Circle -->
+                    <li class="timeline-item-anim">
+                        <div class="timeline-image timeline-image-end">
+                            <div class="timeline-icon-wrap">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Skills & Tech Stack -->
+        <section class="page-section" id="skills">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase" style="color: #fff;">Tech Arsenal</h2>
+                    <h3 class="section-subheading" style="color: #6c757d;">Languages, frameworks & platforms I wield daily</h3>
+                </div>
+                <!-- Skills Grid -->
+                <div class="skills-grid">
+                    <!-- Core Java -->
+                    <div class="skill-card skill-card-anim" id="skill-java">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java">
+                        </div>
+                        <h5 class="skill-name">Core Java</h5>
+                        <p class="skill-tagline">Write once, debug everywhere.</p>
                     </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <img src = 'assets/img/web-package-pngrepo-com.png' height = "130" width = "130">
-                        </span>
-                        <h4 class="my-3">Web Development</h4>
-                        <p class="text-muted">Want someone to build a beautiful site with janky backend logic? I'm your guy.</p>
+                    <!-- Python -->
+                    <div class="skill-card skill-card-anim" id="skill-python">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python">
+                        </div>
+                        <h5 class="skill-name">Python</h5>
+                        <p class="skill-tagline">Life's too short for semicolons.</p>
                     </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <img src = "assets/img/robot-pngrepo-com.png" height = "130" width = "130">
-                        </span>
-                        <h4 class="my-3">Bot Development</h4>
-                        <p class="text-muted">Meet Sunny bot. A quirky little dude I created. He's hosted on AWS as a discord bot but the poor dude 
-                            lost his home when Bezos banned my account. He will return with a vengeance.
-                        </p>
+                    <!-- Bash -->
+                    <div class="skill-card skill-card-anim" id="skill-bash">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" alt="Bash">
+                        </div>
+                        <h5 class="skill-name">Bash</h5>
+                        <p class="skill-tagline">sudo make me a sandwich.</p>
+                    </div>
+                    <!-- Spring Boot -->
+                    <div class="skill-card skill-card-anim" id="skill-spring">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Boot">
+                        </div>
+                        <h5 class="skill-name">Spring Boot</h5>
+                        <p class="skill-tagline">Microservices go brrr.</p>
+                    </div>
+                    <!-- Kafka -->
+                    <div class="skill-card skill-card-anim" id="skill-kafka">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" alt="Kafka" style="filter: invert(1);">
+                        </div>
+                        <h5 class="skill-name">Kafka</h5>
+                        <p class="skill-tagline">Events in, events out, never a dull moment.</p>
+                    </div>
+                    <!-- Redis -->
+                    <div class="skill-card skill-card-anim" id="skill-redis">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" alt="Redis">
+                        </div>
+                        <h5 class="skill-name">Redis</h5>
+                        <p class="skill-tagline">Cache me if you can.</p>
+                    </div>
+                    <!-- AWS -->
+                    <div class="skill-card skill-card-anim" id="skill-aws">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" style="filter: invert(1);">
+                        </div>
+                        <h5 class="skill-name">AWS</h5>
+                        <p class="skill-tagline">There's a service for that. Probably.</p>
+                    </div>
+                    <!-- TensorFlow -->
+                    <div class="skill-card skill-card-anim" id="skill-tensorflow">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">
+                        </div>
+                        <h5 class="skill-name">TensorFlow</h5>
+                        <p class="skill-tagline">Teaching machines to think since 2020.</p>
+                    </div>
+                    <!-- PostgreSQL -->
+                    <div class="skill-card skill-card-anim" id="skill-postgres">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                        </div>
+                        <h5 class="skill-name">PostgreSQL</h5>
+                        <p class="skill-tagline">SELECT * FROM skills WHERE awesome = true;</p>
+                    </div>
+                    <!-- GCP -->
+                    <div class="skill-card skill-card-anim" id="skill-gcp">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="GCP">
+                        </div>
+                        <h5 class="skill-name">GCP</h5>
+                        <p class="skill-tagline">Pub/Sub, Buckets &amp; beyond.</p>
+                    </div>
+                    <!-- MCP -->
+                    <div class="skill-card skill-card-anim" id="skill-mcp">
+                        <div class="skill-icon">
+                            <i class="fas fa-plug" style="font-size: 2.8rem; color: #00d4aa;"></i>
+                        </div>
+                        <h5 class="skill-name">MCP</h5>
+                        <p class="skill-tagline">Model Context Protocol &mdash; AI tooling pioneer.</p>
+                    </div>
+                    <!-- OAuth -->
+                    <div class="skill-card skill-card-anim" id="skill-oauth">
+                        <div class="skill-icon">
+                            <i class="fas fa-key" style="font-size: 2.8rem; color: #ffc800;"></i>
+                        </div>
+                        <h5 class="skill-name">OAuth 2.0</h5>
+                        <p class="skill-tagline">Bearer of tokens. Guardian of scopes.</p>
+                    </div>
+                    <!-- Web Scraping -->
+                    <div class="skill-card skill-card-anim" id="skill-scraping">
+                        <div class="skill-icon">
+                            <i class="fas fa-spider" style="font-size: 2.8rem; color: #e74c3c;"></i>
+                        </div>
+                        <h5 class="skill-name">Web Scraping</h5>
+                        <p class="skill-tagline">If it's on the internet, I can get it.</p>
+                    </div>
+                    <!-- Discord APIs -->
+                    <div class="skill-card skill-card-anim" id="skill-discord">
+                        <div class="skill-icon">
+                            <i class="fab fa-discord" style="font-size: 2.8rem; color: #5865F2;"></i>
+                        </div>
+                        <h5 class="skill-name">Discord APIs</h5>
+                        <p class="skill-tagline">Bots, webhooks &amp; gateway events.</p>
+                    </div>
+                    <!-- SaaS Webhooks -->
+                    <div class="skill-card skill-card-anim" id="skill-webhooks">
+                        <div class="skill-icon">
+                            <i class="fas fa-satellite-dish" style="font-size: 2.8rem; color: #9b59b6;"></i>
+                        </div>
+                        <h5 class="skill-name">SaaS Webhooks</h5>
+                        <p class="skill-tagline">Real-time event plumbing at enterprise scale.</p>
+                    </div>
+                </div>
+
+                <!-- Enterprise Expertise -->
+                <div class="enterprise-section">
+                    <div class="text-center" style="margin-bottom: 2.5rem;">
+                        <h3 class="section-heading" style="color: #ffc800; font-size: 1.8rem; font-family: 'Montserrat', sans-serif; font-weight: 700; text-transform: uppercase;">Enterprise Expertise</h3>
+                        <p style="color: #6c757d; font-style: italic;">Out-of-Band CASB, SSPM &amp; Cloud API Integrations</p>
+                    </div>
+                    <div class="enterprise-grid">
+                        <div class="enterprise-card" id="ent-gworkspace">
+                            <div class="enterprise-icon">
+                                <i class="fab fa-google" style="color: #4285F4;"></i>
+                            </div>
+                            <h5>Google Workspace</h5>
+                            <p>Admin, Drive, Gmail APIs &mdash; deep integration expertise at enterprise scale.</p>
+                        </div>
+                        <div class="enterprise-card" id="ent-gcp-apis">
+                            <div class="enterprise-icon">
+                                <i class="fas fa-cloud" style="color: #4285F4;"></i>
+                            </div>
+                            <h5>GCP APIs</h5>
+                            <p>Pub/Sub for real-time event streaming, Cloud Storage Buckets for scale.</p>
+                        </div>
+                        <div class="enterprise-card" id="ent-sspm">
+                            <div class="enterprise-icon">
+                                <i class="fas fa-clipboard-check" style="color: #ffc800;"></i>
+                            </div>
+                            <h5>SSPM / Posture</h5>
+                            <p>SaaS Security Posture Management &mdash; finding misconfigs before attackers do.</p>
+                        </div>
+                        <div class="enterprise-card" id="ent-oauth">
+                            <div class="enterprise-icon">
+                                <i class="fas fa-lock" style="color: #00d4aa;"></i>
+                            </div>
+                            <h5>OAuth &amp; Auth Flows</h5>
+                            <p>OAuth 2.0, service accounts, consent flows &mdash; the plumbing behind every CASB integration.</p>
+                        </div>
+                        <div class="enterprise-card" id="ent-zoom">
+                            <div class="enterprise-icon">
+                                <i class="fas fa-video" style="color: #2D8CFF;"></i>
+                            </div>
+                            <h5>Zoom</h5>
+                            <p>API integrations for collaboration security &amp; compliance monitoring.</p>
+                        </div>
+                        <div class="enterprise-card" id="ent-huggingface">
+                            <div class="enterprise-icon">
+                                <i class="fas fa-robot" style="color: #FFD21E;"></i>
+                            </div>
+                            <h5>HuggingFace</h5>
+                            <p>Transformers, model inference &amp; NLP pipelines &mdash; AI meets production.</p>
+                        </div>
+                        <div class="enterprise-card" id="ent-scaling">
+                            <div class="enterprise-icon">
+                                <i class="fas fa-chart-line" style="color: #ffc800;"></i>
+                            </div>
+                            <h5>Scaling Systems</h5>
+                            <p>Designed for millions of events. Built to never break a sweat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="achievement-banner">
+                    <h4><i class="fas fa-award" style="margin-right: 8px;"></i> Achievements</h4>
+                    <div class="achievement-items">
+                        <div class="achievement-item">
+                            <div class="ach-icon">
+                                <i class="fas fa-trophy" style="color: #ffc800;"></i>
+                            </div>
+                            <div class="ach-content">
+                                <h5>Google AI Hack&rsquo;25 Champions</h5>
+                                <p>Won the championship for building a Data-Backed DLP Policy Recommendation Engine for Zscaler.</p>
+                                <a href="https://www.credly.com/badges/04fe71cf-4e35-45b1-9b67-20b5ff5d0c41/linked_in_profile" target="_blank"><i class="fas fa-external-link-alt" style="margin-right: 4px;"></i>View Credential</a>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="ach-icon">
+                                <i class="fas fa-file-signature" style="color: #ffc800;"></i>
+                            </div>
+                            <div class="ach-content">
+                                <h5>USPTO Patent (Submitted)</h5>
+                                <p>Data-Backed DLP Policy Recommendation Engine &mdash; from hackathon prototype to intellectual property submitted to the United States Patent and Trademark Office.</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="ach-icon">
+                                <i class="fas fa-plug" style="color: #00d4aa;"></i>
+                            </div>
+                            <div class="ach-content">
+                                <h5>MCP Development</h5>
+                                <p>Building Model Context Protocol integrations &mdash; pioneering AI-native tooling and agentic interfaces for enterprise platforms.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-       <!--add missing code here-->
        
         <footer class="footer py-4" style="background-color:rgb(41, 40, 40);position: relative;margin-top: 100;">
             <div class="container">
@@ -324,6 +605,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/hero-animation.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->

@@ -109,3 +109,139 @@ window.onload = function() {
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
 };
+
+// =====================================================
+// SCROLL REVEAL — IntersectionObserver for animations
+// =====================================================
+(function () {
+  'use strict';
+
+  // Respect prefers-reduced-motion
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    // Show everything immediately
+    document.querySelectorAll('.timeline-item-anim, .skill-card-anim, .enterprise-card').forEach(function (el) {
+      el.classList.add('animate-in');
+      el.style.opacity = '1';
+    });
+    document.querySelectorAll('#journey, #skills').forEach(function (el) {
+      el.classList.add('section-visible');
+    });
+    return;
+  }
+
+  // Helper: animate timeline items with staggered delay
+  function revealTimelineItems() {
+    var items = document.querySelectorAll('.timeline-item-anim');
+    if (!items.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          // Stagger based on item index
+          var index = Array.prototype.indexOf.call(items, entry.target);
+          var delay = index * 200; // 200ms stagger
+          setTimeout(function () {
+            entry.target.classList.add('animate-in');
+          }, delay);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    items.forEach(function (item) {
+      observer.observe(item);
+    });
+  }
+
+  // Helper: reveal section headings when scrolled into view
+  function revealSections() {
+    var sections = document.querySelectorAll('#journey, #skills');
+    if (!sections.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(function (section) {
+      observer.observe(section);
+    });
+  }
+
+  // Helper: reveal skill cards with stagger
+  function revealSkillCards() {
+    var cards = document.querySelectorAll('.skill-card-anim');
+    if (!cards.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var index = Array.prototype.indexOf.call(cards, entry.target);
+          var delay = index * 80; // Fast stagger for grid
+          setTimeout(function () {
+            entry.target.classList.add('animate-in');
+          }, delay);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    cards.forEach(function (card) {
+      observer.observe(card);
+    });
+  }
+
+  // Helper: reveal enterprise cards with stagger
+  function revealEnterpriseCards() {
+    var cards = document.querySelectorAll('.enterprise-card');
+    if (!cards.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var index = Array.prototype.indexOf.call(cards, entry.target);
+          var delay = index * 120;
+          setTimeout(function () {
+            entry.target.classList.add('animate-in');
+          }, delay);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    cards.forEach(function (card) {
+      observer.observe(card);
+    });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      revealTimelineItems();
+      revealSections();
+      revealSkillCards();
+      revealEnterpriseCards();
+    });
+  } else {
+    revealTimelineItems();
+    revealSections();
+    revealSkillCards();
+    revealEnterpriseCards();
+  }
+})();

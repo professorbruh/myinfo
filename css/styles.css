@@ -11339,19 +11339,28 @@ p {
 }
 #mainNav .navbar-brand {
   color: #ffc800;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Space Grotesk", "Montserrat", sans-serif;
   font-weight: 700;
-  letter-spacing: 0.0625em;
-  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  text-decoration: none;
+  text-shadow: 0 0 20px rgba(255, 200, 0, 0.3), 0 0 40px rgba(255, 200, 0, 0.1);
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+#mainNav .navbar-brand:hover {
+  color: #ffe066;
+  text-shadow: 0 0 25px rgba(255, 200, 0, 0.5), 0 0 50px rgba(255, 200, 0, 0.2);
 }
 #mainNav .navbar-brand img {
   height: 1.5rem;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.95rem;
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
   color: #fff;
-  letter-spacing: 0.0625em;
+  letter-spacing: 0.08em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #ffc800;
@@ -11367,7 +11376,7 @@ p {
   }
   #mainNav .navbar-brand {
     font-size: 1.5em;
-    transition: font-size 0.3s ease-in-out;
+    transition: font-size 0.3s ease-in-out, text-shadow 0.3s ease;
   }
   #mainNav .navbar-brand img {
     height: 2rem;
@@ -11379,7 +11388,7 @@ p {
     background-color: #212529;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    font-size: 1.25em;
+    font-size: 1.2em;
   }
   #mainNav.navbar-shrink .navbar-brand svg,
 #mainNav.navbar-shrink .navbar-brand img {
@@ -11397,25 +11406,37 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/header-bg.gif");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
+  background: linear-gradient(180deg, #0d0f13 0%, #1a1d21 100%);
+  position: relative;
+  overflow: hidden;
+}
+#heroCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 header.masthead .masthead-subheading {
-  font-size: 1.5rem;
-  font-style: italic;
-  line-height: 1.5rem;
-  margin-bottom: 25px;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: "Inter", "Roboto Slab", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.06em;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
 }
 header.masthead .masthead-heading {
-  font-size: 3.25rem;
+  font-size: 2.8rem;
   font-weight: 700;
-  line-height: 3.25rem;
+  line-height: 1.1;
   margin-bottom: 2rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Space Grotesk", "Montserrat", sans-serif;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.9), 0 0 60px rgba(255, 200, 0, 0.15);
 }
 
 @media (min-width: 768px) {
@@ -11424,16 +11445,15 @@ header.masthead .masthead-heading {
     padding-bottom: 12.5rem;
   }
   header.masthead .masthead-subheading {
-    font-size: 2.25rem;
-    font-style: italic;
-    line-height: 2.25rem;
-    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
   }
   header.masthead .masthead-heading {
-    font-size: 4.5rem;
+    font-size: 4.2rem;
     font-weight: 700;
-    line-height: 4.5rem;
-    margin-bottom: 4rem;
+    line-height: 1.1;
+    margin-bottom: 3rem;
   }
 }
 #portfolio .portfolio-item {
@@ -11763,4 +11783,736 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* =====================================================
+   JOURNEY TIMELINE — Custom Enhancements
+   ===================================================== */
+
+/* Dark section background */
+#journey {
+  background: linear-gradient(180deg, #1a1d21 0%, #12141a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background particles / texture */
+#journey::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255, 200, 0, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 200, 0, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Timeline line — golden gradient */
+#journey .timeline:before {
+  background: linear-gradient(to bottom, transparent, #ffc800 15%, #ffc800 85%, transparent);
+  width: 3px;
+  opacity: 0.4;
+}
+
+/* Timeline icon circles */
+#journey .timeline > li .timeline-image {
+  background: linear-gradient(135deg, #ffc800 0%, #e6a800 100%);
+  border: 4px solid rgba(255, 200, 0, 0.3);
+  box-shadow:
+    0 0 20px rgba(255, 200, 0, 0.25),
+    0 0 40px rgba(255, 200, 0, 0.1),
+    inset 0 0 15px rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              box-shadow 0.4s ease;
+}
+
+#journey .timeline > li .timeline-image:hover {
+  transform: scale(1.12);
+  box-shadow:
+    0 0 30px rgba(255, 200, 0, 0.45),
+    0 0 60px rgba(255, 200, 0, 0.2),
+    inset 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+/* Icon wrapper inside timeline circles */
+.timeline-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.timeline-icon-wrap i {
+  font-size: 1.8rem;
+  color: #212529;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+#journey .timeline > li .timeline-image:hover .timeline-icon-wrap i {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* Timeline panels — glassmorphism */
+#journey .timeline > li .timeline-panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 200, 0, 0.1);
+  border-radius: 16px;
+  padding: 24px 28px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 1px 0 rgba(255, 200, 0, 0.05) inset;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+#journey .timeline > li .timeline-panel:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 200, 0, 0.3);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(255, 200, 0, 0.08);
+}
+
+/* Remove the default Bootstrap arrow on panels */
+#journey .timeline > li .timeline-panel:before,
+#journey .timeline > li .timeline-panel:after,
+#journey .timeline > li.timeline-inverted > .timeline-panel:before,
+#journey .timeline > li.timeline-inverted > .timeline-panel:after {
+  display: none;
+}
+
+/* Year heading glow */
+#journey .timeline-heading h4:first-child {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 200, 0, 0.3);
+}
+
+/* Subheading */
+#journey .timeline-heading .subheading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+/* Body text */
+#journey .timeline-body p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #9ca3af;
+}
+
+/* End circle (rocket) */
+.timeline-image-end {
+  background: linear-gradient(135deg, #ffc800 0%, #ff8c00 100%) !important;
+}
+
+/* =====================================================
+   SCROLL REVEAL ANIMATIONS
+   ===================================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 20px rgba(255, 200, 0, 0.25),
+      0 0 40px rgba(255, 200, 0, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(255, 200, 0, 0.4),
+      0 0 60px rgba(255, 200, 0, 0.15);
+  }
+}
+
+@keyframes lineGrow {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+/* Items start hidden */
+.timeline-item-anim {
+  opacity: 0;
+}
+
+.timeline-item-anim.animate-in {
+  opacity: 1;
+}
+
+/* Normal items (left panel) — slide in from left */
+.timeline-item-anim:not(.timeline-inverted).animate-in .timeline-panel {
+  animation: fadeInLeft 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Inverted items (right panel) — slide in from right */
+.timeline-item-anim.timeline-inverted.animate-in .timeline-panel {
+  animation: fadeInRight 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Icon circles — scale in with bounce */
+.timeline-item-anim.animate-in .timeline-image {
+  animation: scaleIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* After appearing, pulse glow */
+.timeline-item-anim.animate-in .timeline-image {
+  animation: scaleIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
+             pulseGlow 3s ease-in-out 0.8s infinite;
+}
+
+/* Section heading animation */
+#journey .section-heading,
+#journey .section-subheading {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#journey.section-visible .section-heading,
+#journey.section-visible .section-subheading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#journey.section-visible .section-subheading {
+  transition-delay: 0.2s;
+}
+
+/* =====================================================
+   RESPONSIVE TIMELINE ICON SIZES
+   ===================================================== */
+
+@media (min-width: 768px) {
+  .timeline-icon-wrap i {
+    font-size: 2.2rem;
+  }
+  #journey .timeline > li .timeline-panel {
+    padding: 28px 32px;
+  }
+}
+
+@media (min-width: 992px) {
+  .timeline-icon-wrap i {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .timeline-icon-wrap i {
+    font-size: 3.2rem;
+  }
+}
+
+/* Mobile: adjust panel spacing for dark background */
+@media (max-width: 767.98px) {
+  #journey .timeline > li .timeline-panel {
+    padding: 20px 20px 20px 100px;
+  }
+  #journey .timeline-heading .subheading {
+    font-size: 1.1rem;
+  }
+  /* On mobile, all items slide up instead of left/right */
+  .timeline-item-anim:not(.timeline-inverted).animate-in .timeline-panel,
+  .timeline-item-anim.timeline-inverted.animate-in .timeline-panel {
+    animation: fadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+}
+
+/* =====================================================
+   TIMELINE LOGO IMAGES
+   ===================================================== */
+
+.timeline-image.timeline-logo {
+  padding: 0;
+  overflow: hidden;
+}
+
+.timeline-image.timeline-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+/* Sub-timeline for Zscaler career progression */
+.timeline-sub {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  position: relative;
+}
+
+.timeline-sub::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(255, 200, 0, 0.4), rgba(255, 200, 0, 0.1));
+}
+
+.timeline-sub li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 1rem;
+}
+
+.timeline-sub li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-sub li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffc800;
+  box-shadow: 0 0 8px rgba(255, 200, 0, 0.4);
+}
+
+.timeline-sub .sub-role {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.timeline-sub .sub-period {
+  color: #ffc800;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.15rem 0;
+}
+
+.timeline-sub .sub-desc {
+  color: #9ca3af;
+  font-size: 0.82rem;
+  font-style: italic;
+  margin: 0.2rem 0 0 0;
+  line-height: 1.4;
+}
+
+/* Achievement banner */
+.achievement-banner {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(255, 200, 0, 0.08) 0%, rgba(255, 140, 0, 0.04) 100%);
+  border: 1px solid rgba(255, 200, 0, 0.15);
+  border-radius: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.achievement-banner h4 {
+  color: #ffc800;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.achievement-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.achievement-item:hover {
+  border-color: rgba(255, 200, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.achievement-item .ach-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 200, 0, 0.1);
+  border-radius: 50%;
+  font-size: 1.1rem;
+}
+
+.achievement-item .ach-content h5 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 0 0 0.3rem 0;
+}
+
+.achievement-item .ach-content p {
+  color: #9ca3af;
+  font-size: 0.82rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.achievement-item .ach-content a {
+  color: #ffc800;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.achievement-item .ach-content a:hover {
+  color: #ffe066;
+}
+
+/* =====================================================
+   SKILLS / TECH ARSENAL SECTION
+   ===================================================== */
+
+#skills {
+  background: linear-gradient(180deg, #12141a 0%, #1a1d21 50%, #12141a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#skills::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 70% 20%, rgba(255, 200, 0, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 30% 80%, rgba(255, 200, 0, 0.03) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+#skills .section-heading,
+#skills .section-subheading {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#skills.section-visible .section-heading,
+#skills.section-visible .section-subheading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#skills.section-visible .section-subheading {
+  transition-delay: 0.2s;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto 4rem auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Skill Card */
+.skill-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 200, 0, 0.08);
+  border-radius: 16px;
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease,
+              background 0.4s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ffc800, transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 200, 0, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(255, 200, 0, 0.06);
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+/* Skill Icon */
+.skill-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-icon img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.15) rotate(-3deg);
+}
+
+/* Skill Name */
+.skill-name {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+/* Skill Tagline */
+.skill-tagline {
+  color: #6c757d;
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 0;
+  font-family: "Roboto Slab", serif;
+}
+
+/* Skill card scroll animation */
+.skill-card-anim {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.skill-card-anim.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* =====================================================
+   ENTERPRISE EXPERTISE SUB-SECTION
+   ===================================================== */
+
+.enterprise-section {
+  margin-top: 2rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255, 200, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.enterprise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.enterprise-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.enterprise-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enterprise-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 200, 0, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.enterprise-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.enterprise-card:hover .enterprise-icon {
+  transform: scale(1.1);
+  background: rgba(255, 200, 0, 0.1);
+}
+
+.enterprise-icon i {
+  font-size: 1.5rem;
+}
+
+.enterprise-card h5 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.enterprise-card p {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* =====================================================
+   RESPONSIVE SKILLS
+   ===================================================== */
+
+@media (max-width: 575.98px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-card {
+    padding: 1.5rem 1rem 1.2rem;
+  }
+
+  .skill-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .skill-icon img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .enterprise-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
