@@ -28,7 +28,6 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
                         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -137,11 +136,20 @@
                             </div>
                         </div>
                     </li>
-                    <!-- End Circle -->
+                    <!-- Now -->
                     <li class="timeline-item-anim">
-                        <div class="timeline-image timeline-image-end">
+                        <div class="timeline-image timeline-image-end" style="background: linear-gradient(135deg, #ffc800, #ff8c00);">
                             <div class="timeline-icon-wrap">
-                                <i class="fas fa-rocket"></i>
+                                <i class="fas fa-terminal" style="color: #212529;"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 style="color: #ffc800;">Now</h4>
+                                <h4 class="subheading" style="color: #fff;">Still Compiling&hellip;</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">If you've scrolled this far, you either find me interesting or you're procrastinating. Either way, I respect the commitment. The story's still being written &mdash; one <code style="color: #ffc800;">git commit</code> at a time. Stay tuned. 🚀</p>
                             </div>
                         </div>
                     </li>
@@ -180,6 +188,14 @@
                         </div>
                         <h5 class="skill-name">Bash</h5>
                         <p class="skill-tagline">sudo make me a sandwich.</p>
+                    </div>
+                    <!-- Linux -->
+                    <div class="skill-card skill-card-anim" id="skill-linux">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux">
+                        </div>
+                        <h5 class="skill-name">Linux</h5>
+                        <p class="skill-tagline">btw, I use it.</p>
                     </div>
                     <!-- Spring Boot -->
                     <div class="skill-card skill-card-anim" id="skill-spring">
@@ -276,6 +292,14 @@
                         </div>
                         <h5 class="skill-name">SaaS Webhooks</h5>
                         <p class="skill-tagline">Real-time event plumbing at enterprise scale.</p>
+                    </div>
+                    <!-- Git -->
+                    <div class="skill-card skill-card-anim" id="skill-git">
+                        <div class="skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+                        </div>
+                        <h5 class="skill-name">Git</h5>
+                        <p class="skill-tagline">Merge conflicts are just spicy code reviews.</p>
                     </div>
                 </div>
 
@@ -375,18 +399,20 @@
             </div>
         </section>
        
-        <footer class="footer py-4" style="background-color:rgb(41, 40, 40);position: relative;margin-top: 100;">
-            <div class="container">
-                <p class="text-muted">PS: I'm still working on this.This isn't complete. <span><img src = "assets/img/pepelaugh.jfif" height="40" width="40"></span></p>
-                
-
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start"></div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+        <footer class="footer py-5" id="contact" style="background: linear-gradient(180deg, #12141a 0%, #0d0f13 100%); position: relative;">
+            <div class="container text-center">
+                <h3 style="color: #ffc800; font-family: 'Space Grotesk', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem;">Let's Connect</h3>
+                <p style="color: #6c757d; font-style: italic; margin-bottom: 2.5rem;">Always up for a good conversation about tech, coffee, or why tabs are better than spaces.</p>
+                <div class="d-flex justify-content-center gap-4 flex-wrap" style="margin-bottom: 2.5rem;">
+                    <a href="https://www.linkedin.com/in/sidharth-rajagopal-a46a931ba/" target="_blank" class="btn btn-outline-light px-4 py-2" style="border-color: rgba(255,200,0,0.3); border-radius: 12px; font-family: 'Inter', sans-serif; font-weight: 500; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#ffc800'; this.style.color='#ffc800'; this.style.boxShadow='0 0 20px rgba(255,200,0,0.15)'" onmouseout="this.style.borderColor='rgba(255,200,0,0.3)'; this.style.color='#fff'; this.style.boxShadow='none'">
+                        <i class="fab fa-linkedin-in" style="margin-right: 8px;"></i>LinkedIn
+                    </a>
+                    <a href="https://github.com/professorbruh" target="_blank" class="btn btn-outline-light px-4 py-2" style="border-color: rgba(255,200,0,0.3); border-radius: 12px; font-family: 'Inter', sans-serif; font-weight: 500; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#ffc800'; this.style.color='#ffc800'; this.style.boxShadow='0 0 20px rgba(255,200,0,0.15)'" onmouseout="this.style.borderColor='rgba(255,200,0,0.3)'; this.style.color='#fff'; this.style.boxShadow='none'">
+                        <i class="fab fa-github" style="margin-right: 8px;"></i>GitHub
+                    </a>
+                </div>
+                <div style="border-top: 1px solid rgba(255,200,0,0.1); padding-top: 1.5rem;">
+                    <p style="color: #4a4f5a; font-size: 0.82rem; font-family: 'Inter', sans-serif; margin: 0;">Built with caffeine, curiosity &amp; questionable CSS decisions. <span><img src="assets/img/pepelaugh.jfif" height="24" width="24" style="vertical-align: middle; border-radius: 4px;"></span></p>
                 </div>
             </div>
         </footer>

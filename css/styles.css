@@ -12287,7 +12287,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.5rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto 4rem auto;
   position: relative;
   z-index: 1;
@@ -12405,7 +12405,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -12513,6 +12513,6 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 @media (min-width: 992px) {
   .skills-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
