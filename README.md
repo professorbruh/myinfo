@@ -10,7 +10,7 @@ My personal portfolio site, built to showcase my journey, skills, and work in cl
 
 - **Pixel-art hero** — Canvas-based Minecraft-style animated background
 - **Career timeline** — From Amrita Vishwa Vidyapeetham to Senior Software Engineer at Zscaler
-- **Tech arsenal** — 18 skill cards with icons and quirky one-liners
+- **My Tech arsenal** — 0 to 100 real quick
 - **Enterprise expertise** — Out-of-Band CASB, SSPM, OAuth, GCP APIs, and more
 - **Achievements** — Google AI Hack'25 Champions, USPTO patent submission, MCP development
 
@@ -22,8 +22,6 @@ My personal portfolio site, built to showcase my journey, skills, and work in cl
 | Styling | CSS3 (custom + Bootstrap 5) |
 | Interactivity | Vanilla JavaScript |
 | Animations | Canvas API, CSS transitions, IntersectionObserver |
-| Icons | Font Awesome 6, Devicons |
-| Fonts | Space Grotesk, Inter, Roboto Slab |
 | Hosting | GitHub Pages |
 
 ## Running Locally
